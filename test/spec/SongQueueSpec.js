@@ -24,6 +24,7 @@ describe('SongQueue', function() {
       it('plays it', function() {
         var songQueue = new SongQueue();
         songQueue.add(songData1);
+
         expect(playSpy).to.have.been.called;
       });
     });
