@@ -9,7 +9,8 @@ var SongQueue = Songs.extend({
       }
     }, this);
 
-    this.on('ended', function(){
+    this.on('ended', function(song){
+      song.set('number', song.get('number') + 1);
       this.shift();
       if(this.length > 0){
         this.playFirst();
