@@ -16,8 +16,12 @@ var SongQueue = Songs.extend({
       }
     }, this);
 
-    this.on('dequeue', function() {
-      this.shift();
+    this.on('dequeue', function(song) {
+      if(this.at(0) === song){
+        song.trigger('ended');
+      } else{
+        this.remove(song);
+      }
     }, this);
 
   },

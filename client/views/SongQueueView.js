@@ -9,7 +9,13 @@ var SongQueueView = Backbone.View.extend({
     this.render();
   },
 
-  
+  // events: {
+  //   'click': function() {
+  //     debugger;
+  //     if(this.model.at(0) === this.model)
+  //     this.model.dequeue();
+  //   }
+  // },
 
   render: function() {
     // to preserve event handlers on child nodes, we must call .detach() on them before overwriting with .html()
